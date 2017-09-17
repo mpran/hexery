@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hexert",
+  "description": "Extension for hex.pm packages search",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "http://192.168.56.120/*",
+    "http://li1034-58.members.linode.com:8080/*"
+  ]
+}

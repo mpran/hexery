@@ -1,0 +1,25 @@
+<html>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body{width: 20em; margin-bottom: .5em;}
+</style>
+  <body>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input autocomplete="off" id="search_text" type="text" class="form-control" placeholder="Package search"/>
+          <span class="input-group-btn">
+            <button id="search_button" class="btn btn-secondary">Search</button>
+          </span>
+        </div>
+        <div id="error_msg"></div>
+      </div>
+    </div>
+
+    <div id="search_results"></div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

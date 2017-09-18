@@ -1,17 +1,20 @@
 {
   "manifest_version": 2,
 
-  "name": "Hexert",
+  "name": "Hexery",
   "description": "Extension for hex.pm packages search",
   "version": "1.0",
-
+  "icons": {
+    "48": "icon.png",
+    "96": "icon96.png",
+    "128": "icon128.png"
+  },
   "browser_action": {
     "default_popup": "popup.html"
   },
   "permissions": [
     "tabs",
     "storage",
-    "http://192.168.56.120/*",
     "http://li1034-58.members.linode.com:8080/*"
   ]
 }

@@ -1,3 +1,7 @@
+'use strict';
+
+import { ExactSearchView } from './views/index.js';
+
 window.addEventListener('click',function(e){
   if(e.target.href !== undefined){
     chrome.tabs.create({url:e.target.href})
@@ -10,7 +14,7 @@ $(function(){
     search_hex_pm();
   });
 
-  chrome.storage.sync.get('state', function(data){ apply_results_to_view(data.state); });
+  chrome.storage.local.get('state', function (data) { data && ExactSearchView.applyResultsToView(data.state); });
 
 });
 
@@ -31,13 +35,13 @@ function search_hex_pm(){
 
   $("#search_text").val("");
 
-  var url = "http://li1034-58.members.linode.com:8080/api/hex_search?search=";
+  var url = `https://hex.pm/api/packages?search=${search_text}&sort=recent_downloads`;
 
-  $.getJSON(url + search_text,
+  $.getJSON(url,
     function(data){
-      if (data.exact_match_package_count > 0){
-        apply_results_to_view(data);
-        chrome.storage.sync.set({'state': data});
+      if (data && data.length > 0){
+        ExactSearchView.applyResultsToView(data);
+        chrome.storage.local.set({'state': data});
       }
       else{
         $("#error_msg").html("0 results found");

@@ -15,6 +15,6 @@
   "permissions": [
     "tabs",
     "storage",
-    "http://li1034-58.members.linode.com:8080/*"
+    "https://hex.pm"
   ]
 }

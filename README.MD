@@ -1,1 +1,1 @@
-Chrome extension repo for hex.pm search
+Chrome extension for hex.pm search

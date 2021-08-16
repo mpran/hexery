@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Hexert",
+  "name": "Hexery",
   "description": "Extension for hex.pm packages search",
   "version": "1.0",
 
